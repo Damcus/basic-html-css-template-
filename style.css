@@ -1,0 +1,170 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    color: #FFFFFF;
+    background-color: #121212; /* Matte Black Background */
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #1A1A1A;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease;
+}
+
+/* Title Hover Animation */
+header h1:hover {
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+header nav {
+    flex-grow: 1; /* Allow nav to grow and push items to the right */
+    text-align: right; /* Align the text to the right */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Ensure items are aligned to the end */
+    gap: 20px;
+}
+
+header nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Navigation Hover Animation */
+header nav a:hover {
+    color: #BBBBBB;
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.section {
+    padding: 60px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Section Title Hover Animation */
+.section h2:hover {
+    color: #FFFFFF;
+    transform: scale(1.05); /* Slight zoom-in */
+}
+
+.section p {
+    font-size: 1.1rem;
+    color: #BBBBBB;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 600px; /* Maximum width for large screens */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Spacing around the image */
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center; /* Center the gallery images */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    gap: 20px; /* Space between images */
+}
+
+.gallery-image {
+    width: 100%; /* Make image responsive */
+    max-width: 300px; /* Maximum width for gallery images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Animation for Images */
+.gallery-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #FFFFFF;
+    color: #121212;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+}
+
+/* Button Hover Animation */
+.btn:hover {
+    background-color: #BBBBBB;
+    color: #FFFFFF;
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for added depth */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #1A1A1A;
+    padding: 20px 0;
+    text-align: center;
+    color: #666666;
+    border-top: 1px solid #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
