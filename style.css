@@ -9,7 +9,6 @@
 body {
     color: #FFFFFF;
     background-color: #121212; /* Matte Black Background */
-    overflow-x: hidden;
 }
 
 .container {
@@ -70,7 +69,7 @@ header nav a:hover {
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
-    animation: fadeIn 1s ease forwards;
+    animation: fadeIn 1s ease forwards; /* Fade in animation */
 }
 
 .section h2 {
@@ -99,7 +98,13 @@ header nav a:hover {
     height: auto; /* Maintain aspect ratio */
     margin: 20px 0; /* Spacing around the image */
     border-radius: 10px; /* Optional: rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition for hover effects */
+}
+
+/* Responsive Image Hover Animation */
+.responsive-image:hover {
+    transform: scale(1.05) rotate(1deg); /* Zoom and slight rotation */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
 }
 
 .image-gallery {
@@ -114,13 +119,42 @@ header nav a:hover {
     max-width: 300px; /* Maximum width for gallery images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Optional: rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease; /* Smooth transition for hover effects */
 }
 
-/* Hover Animation for Images */
+/* Advanced Hover Animation for Images */
 .gallery-image:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transform: scale(1.1) rotate(3deg); /* Slight zoom and rotation effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deeper shadow for depth */
+}
+
+/* Login Section Styles */
+.login-section {
+    background-color: #1A1A1A; /* Same as header */
+    padding: 40px 0;
+    border-top: 1px solid #333; /* Divider */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input {
+    width: 300px; /* Fixed width for inputs */
+    padding: 12px;
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222; /* Darker background for inputs */
+    color: #FFFFFF;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #FFFFFF; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
 }
 
 .btn {
@@ -159,6 +193,50 @@ footer {
 
 footer p {
     font-size: 0.9rem;
+}
+
+/* Social Icons Styling */
+.socials {
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #666666; /* Default icon color */
+    font-size: 1.5rem; /* Size of the icons */
+    margin: 0 10px; /* Space between icons */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and scale */
+}
+
+/* Social Icon Hover Animation */
+.social-icon:hover {
+    color: #FFFFFF; /* Change to white on hover */
+    transform: scale(1.2); /* Scale effect */
+}
+
+/* Change to respective colors on hover */
+.social-icon:hover {
+    transform: scale(1.2); /* Scale up effect on hover */
+}
+
+/* Facebook hover effect */
+.social-icon:hover.i.fa-facebook-f {
+    color: #3b5998; /* Facebook Blue */
+}
+
+/* Twitter hover effect */
+.social-icon:hover.i.fa-twitter {
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+/* Instagram hover effect */
+.social-icon:hover.i.fa-instagram {
+    color: #C13584; /* Instagram Pink */
+}
+
+/* LinkedIn hover effect */
+.social-icon:hover.i.fa-linkedin-in {
+    color: #0077B5; /* LinkedIn Blue */
 }
 
 /* Keyframe Animations */
